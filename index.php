@@ -11,6 +11,8 @@ $conexao = mysqli_connect("localhost:3333", "root", "root", "prova");
 
 $exec = mysqli_query($conexao, "SELECT * FROM aluno;");
 
+echo '<a href="/add.php"><button>+</button></a>';
+
 if ($exec->num_rows > 0) {
     echo '<div class="bloco">';
     echo '<div class="titulo"> Nome <span class="matri">Matricula</span> </div>';
@@ -33,3 +35,5 @@ mysqli_close($conexao);
 
 </body>
 </html>
+
+
